@@ -38,7 +38,7 @@ python manage.py migrate
 
 python manage.py createsuperuser
 
-### 🧪 Ejecutar el servidor
+## 🧪 Ejecutar el servidor
 
 python manage.py runserver
 
