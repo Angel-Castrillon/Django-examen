@@ -1,12 +1,22 @@
 {% extends 'tasks/base.html' %}
 
-{% block title %}Registro{% endblock %}
+{% block title %}Registrarse{% endblock %}
 
 {% block content %}
 <h2 class="mb-4">Registrarse</h2>
-<form method="post" class="card p-4 shadow">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="btn btn-success">Crear cuenta</button>
-</form>
+
+<div class="card p-4 shadow-sm" style="max-width: 500px; margin: auto;">
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-success w-100 mt-2">Crear cuenta</button>
+    </form>
+
+    <hr>
+
+    <p class="text-center mt-3">
+        ¿Ya tienes cuenta?
+        <a href="{% url 'login' %}" class="btn btn-outline-primary btn-sm ms-2">Iniciar sesión</a>
+    </p>
+</div>
 {% endblock %}
