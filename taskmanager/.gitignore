@@ -1,0 +1,40 @@
+# Entorno virtual
+venv/
+ENV/
+env/
+.venv/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.log
+
+# Configuración de usuario y sistema
+*.DS_Store
+*.swp
+*.swo
+*.bak
+*.tmp
+
+# Archivos de entorno / secretos
+.env
+.env.*
+
+# Archivos de migraciones (opcional: útil si quieres limpiar antes de subir)
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Archivos de compilación
+*.egg-info/
+build/
+dist/
+
+# Archivos del IDE
+.vscode/
+.idea/
+
+# Archivos de Django
+db.sqlite3
+media/
+staticfiles/

@@ -1,0 +1,8 @@
+# tasks/api_urls.py
+from rest_framework.routers import DefaultRouter
+from .api_views import TaskViewSet
+
+router = DefaultRouter()
+router.register(r'tasks', TaskViewSet, basename='task')
+
+urlpatterns = router.urls

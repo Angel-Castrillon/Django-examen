@@ -1,0 +1,15 @@
+{% extends 'tasks/base.html' %}
+
+{% block title %}Detalle{% endblock %}
+
+{% block content %}
+<div class="card shadow p-4">
+    <h3 class="card-title">{{ task.title }}</h3>
+    <p class="card-text">{{ task.description|default:"(Sin descripción)" }}</p>
+    <p><strong>Estado:</strong> {{ task.completed|yesno:"Completada,Pendiente" }}</p>
+    <p><strong>Creada el:</strong> {{ task.created_at }}</p>
+    <p><strong>Última actualización:</strong> {{ task.updated_at }}</p>
+    <a href="{% url 'task_update' task.pk %}" class="btn btn-warning">Editar</a>
+    <a href="{% url 'task_list' %}" class="btn btn-secondary">Volver</a>
+</div>
+{% endblock %}
